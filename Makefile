@@ -8,6 +8,10 @@ main:
 run:
 	build/test_dimmer --stop-time=1ms --vcd=output.vcd
 
+.PHONY: view
+view:
+	gtkwave output.vcd
+
 .PHONY: clean
 clean:
 	rm -rf build
